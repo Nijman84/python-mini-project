@@ -46,14 +46,15 @@ if (mainChoice == 1):
            "1. Cornflakes\n" +
            "2. Frosties\n" +
            "3. Sugar Puffs\n" +
-           "4. Coco Pops\n"
+           "4. Coco Pops\n" +
+           "5. Krave\n"
            )
 else:
     exit(0)
 
 cerealChoice = int(input("Please choose the cereal you would like. "))
 
-if cerealChoice in (1, 2, 3, 4):
+if cerealChoice in (1, 2, 3, 4, 5):
     if cerealChoice == 1:
         print("You will be served Cornflakes")
     if cerealChoice == 2:
@@ -62,6 +63,8 @@ if cerealChoice in (1, 2, 3, 4):
         print("You will be served Sugar Puffs")
     if cerealChoice == 4:
         print("You will be served Coco Pops")
+    if cerealChoice == 5:
+        print("You will be served Krave")
 else:
     print("We do not serve that cereal option. Play the game son.")
     exit(1)
