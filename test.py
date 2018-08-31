@@ -2,6 +2,7 @@
 # Importing libraries and packages
 # To be able to print out strings properly
 from __future__ import print_function
+from argparse import ArgumentParser
 import time
 import datetime
 import math
@@ -10,7 +11,7 @@ import math
 # print("This is the first line. " +
 #     "This is the 2nd line.")
 
-# Commebt blocks:
+# Comment blocks:
 """
 This is a comment block
 For writing stuff
@@ -33,6 +34,21 @@ print("Hello", str(Name))
 '''
 ANumber = int(input("Type a number: "))
 print("You typed: ", ANumber)
+'''
+
+# Simple function and how to call it from command line
+# Linter wants a docstring, which is the thing surrounded by """
+
+'''
+Calling this function from command line, from this file (test.py):
+python -c 'from test import Hello; Hello("Greeting")'
+'''
+'''
+def Hello(Greeting):
+    """I think this is a docstring."""
+    print("Hello world\n" +
+          "Here is a personal greeting:", Greeting
+          )
 '''
 
 # Basic if..else
@@ -103,8 +119,8 @@ if (dob >= 1) and (dob <= 31):
 else:
     print("Your input day of the month is wrong")
 '''
-'''
 # For breakfast menu see breakfast.py
+'''
 '''
 # Basic for loop with break
 '''
@@ -148,4 +164,45 @@ for Letter in inputWord:
         break
 else:
     print("You gave me an empty string you cheeky monkey.")
+'''
+# Basic while looping
+'''
+sum = 0
+while sum <= 5:
+    print("The current sum is ", sum)
+    sum += 1
+'''
+# for and while loop to create times table
+# the end=' ' will end a print line on the same line rather than a new one
+'''
+From command line:
+python -c 'from test import timesTable; timesTable()'
+'''
+
+
+def timesTable():
+    """Timestable example."""
+
+
+X = 1
+Y = 1
+
+print ('{:>4}'.format(' '), end=' ')
+
+for X in range(1, 14):
+    print('{:>4}'.format(X), end=' ')
+
+print()
+
+for X in range(1, 14):
+    print('{:>4}'.format(X), end=' ')
+    while Y <= 13:
+        print('{:>4}'.format(X * Y), end=' ')
+        Y += 1
+    print()
+    Y = 1
+
+
+'''
+eof
 '''
