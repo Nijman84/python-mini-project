@@ -165,9 +165,46 @@ else:
     exit(1)
 
 '''
-
-
-
+# Basic for loop with break
 '''
-eof
+Value = raw_input("Write less than 7 characters: ")
+LetterNum = 1
+
+for Letter in Value:
+    print("Letter ", LetterNum, " is ", Letter)
+    LetterNum += 1
+    if LetterNum > 6:
+        print("Your input is too long")
+        break
+'''
+# Length checking len command
+'''
+inputPhrase = raw_input("Type some characters: ")
+if len(inputPhrase) > 10:
+    print("You are too long")
+else:
+    print("You are an acceptable length")
+'''
+# lowercase conversion with lower()
+'''
+word = "Turn Th!S !nt0 a L0w3rCas3! $string"
+print(word.lower())
+'''
+# continue and pass statements within a for loop
+# replace pass with continue and vice versa in the code below
+# pass will process the line, continue will skip with no output to stdout
+'''
+LetterNum = 1
+inputWord = raw_input("Type a word, any word: ")
+for Letter in inputWord:
+    if Letter.lower() == "o":
+        pass
+        print("cba with the letter ", Letter)
+    print("Letter ", LetterNum, " of ", inputWord, " is ", Letter)
+    LetterNum += 1
+    if LetterNum > 9:
+        print("Your word is too long for my tiny brain")
+        break
+else:
+    print("You gave me an empty string you cheeky monkey.")
 '''
