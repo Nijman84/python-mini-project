@@ -1,12 +1,4 @@
 #!/usr/bin/python
-import sys
-
-if len(sys.argv) <= 1:
-    print("Please pass in the name of a document you would like to index as the first argument.")
-    exit(1)
-
-doco = sys.argv[1]
-filter = sys.argv[2:]
 
 
 class IndexSearchDocuments:
@@ -16,13 +8,20 @@ class IndexSearchDocuments:
 
     def __init__(self, doco):
         self.doco = doco
+        self.filter = filter
 
-    def indexer(doco):
+    def indexer(self, doco):
+        x = []
+        y = []
         with open(doco) as file:
             for idx, val in enumerate(file.readlines()):
                 print(idx, val)
+                x.append(idx)
+                y.append(val)
+        return x
 
-    def idxsearch(doco, filter):
+    # @staticmethod
+    def idxsearch(self, doco, filter):
         with open(doco) as file:
             x = [idx for
                  idx, val in enumerate(file.readlines())
@@ -32,7 +31,3 @@ class IndexSearchDocuments:
                  ]
             print(x)
         return x
-
-
-IndexSearchDocuments.indexer(doco)
-IndexSearchDocuments.idxsearch(doco, filter)
