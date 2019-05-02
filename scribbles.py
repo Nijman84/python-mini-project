@@ -222,5 +222,26 @@ print (parser.parse_args())
 '''
 
 '''
+# Fibonacci sequence
+a, b = 0, 1
+for i in range(0, 10):
+    print(a, b)
+    a, b = b, a + b
+'''
+
+# Basic list comprehension
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+# this is the noddy way to do it
+'''for i in list:
+    sqrd_num = i * i
+    print(sqrd_num)'''
+
+# this is the list comprehention way of doing it
+sqrd_nums = [i * i for i in list]
+print(sqrd_nums)
+
+
+'''
 eof
 '''
